@@ -17,9 +17,15 @@ input.onButtonPressed(Button.B, function () {
         PlayerBScore = 0
     }
 })
+// When you shake the microbit it should show rock, paper, or scissors.
 input.onGesture(Gesture.Shake, function () {
+    // Choose a number 1-3.
     hand = randint(1, 3)
+    // If hand equals 1 show paper.
+    // If hand equals 2 show rock.
+    // If hand equals 3 show scissors.
     if (hand == 1) {
+        // Show paper
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -30,6 +36,7 @@ input.onGesture(Gesture.Shake, function () {
     } else if (false) {
     	
     } else if (hand == 2) {
+        // Show rock
         basic.showLeds(`
             . . . . .
             . # # # .
@@ -40,6 +47,7 @@ input.onGesture(Gesture.Shake, function () {
     } else if (false) {
     	
     } else if (hand == 3) {
+        // Show scissors
         basic.showLeds(`
             # # . . #
             # # . # .
